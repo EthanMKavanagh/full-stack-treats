@@ -5,7 +5,7 @@ const pool = require('../modules/pool');
 // GET /treats
 router.get( `/`, ( req, res ) => {
     console.log( 'Inside of router GET' );
-    const queryString = `SELECT * FROM "treats";`;
+    const queryString = `SELECT * FROM "treats" ORDER BY "id" ASC;`;
     pool.query( queryString ).then( ( results ) => {
         res.send( results.rows );
     } ).catch( ( err ) => {
@@ -29,7 +29,7 @@ router.post( `/`, ( req, res ) => {
 // PUT /treats/<id>
 router.put( '/:id', ( req, res ) => {
     console.log( 'Inside of router PUT' );
-    const queryString = `UPDATE "treats" SET "description" = 'something' WHERE "id" = $1;`;
+    const queryString = `UPDATE "treats" SET "description" = '' WHERE "id" = $1;`;
     pool.query( queryString, [ req.params.id ] ).then( ( results ) => {
         res.sendStatus
     } ).catch( ( err ) => {
@@ -39,5 +39,17 @@ router.put( '/:id', ( req, res ) => {
 } ); // end PUT
 
 // DELETE /treats/<id>
+router.delete( '/:id', ( req, res ) => {
+    console.log( 'Inside of router DELETE' );
+    const queryString = `DELETE FROM "treats" WHERE "id" = $1;`;
+    let treatId = req.params.id;
+    console.log( 'Deleting:', treatId );
+    pool.query( queryString, [ treatId ] ).then( ( results ) => {
+        res.sendStatus( 200 );
+    } ).catch( ( err ) => {
+        console.error( 'Error in router DELETE', err );
+        res.sendStatus( 500 );
+    } ); // end query
+} ); // end DELETE
 
 module.exports = router;
