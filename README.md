@@ -58,15 +58,15 @@ It seems to be missing the data you just added to your database.
 
 - [x] Adjust pool configurations
 
-- [ ] `GET` route
-	- [ ] Query string
-	- [ ] Send back data
-	- [ ] Add `.catch`
+- [x] `GET` route
+	- [x] Query string
+	- [x] Send back data
+	- [x] Add `.catch`
 
-- [ ] `POST` route
-	- [ ] Query String
-	- [ ] Send back data
-	- [ ] Add `.catch`
+- [x] `POST` route
+	- [x] Query String
+	- [x] Send back data
+	- [x] Add `.catch`
 
 - [ ] `PUT` route
 	- [ ] Query String
