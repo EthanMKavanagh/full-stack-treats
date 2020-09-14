@@ -28,8 +28,8 @@ router.post( `/`, ( req, res ) => {
 
 // PUT /treats/<id>
 router.put( '/:id', ( req, res ) => {
-    console.log( 'Inside of router PUT' );
-    const queryString = `UPDATE "treats" SET "description" = '' WHERE "id" = $1;`;
+    console.log( 'Inside of router PUT. req.body:', req.body );
+    const queryString = `UPDATE "treats" SET "description" = '${req.body.description}' WHERE "id" = $1;`;
     pool.query( queryString, [ req.params.id ] ).then( ( results ) => {
         res.sendStatus
     } ).catch( ( err ) => {

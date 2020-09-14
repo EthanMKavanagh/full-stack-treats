@@ -68,9 +68,9 @@ It seems to be missing the data you just added to your database.
 	- [x] Send back data
 	- [x] Add `.catch`
 
-- [ ] `PUT` route
+- [x] `PUT` route
 	- [x] Query String
-	- [] Send back the data with updates
+	- [x] Send back the data with updates
 	- [x] Add `.catch`
 
 - [x] `DELETE` route
@@ -90,7 +90,7 @@ You will need:
 
 - [x] `POST /treats` expects a treat name, description and link to a url image. There are images provided in `/server/public/assets`
 
-- [ ] `PUT /treats/<id>` updates the treat description (the edit button is also displayed with the Mode Toggle button).
+- [x] `PUT /treats/<id>` updates the treat description (the edit button is also displayed with the Mode Toggle button).
 
 
 Once working you should be able to enter new treat info as such:
