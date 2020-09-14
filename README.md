@@ -53,7 +53,30 @@ It seems to be missing the data you just added to your database.
 
 ## TODO
 
----
+- [x] Create database
+	- [x] Make a table
+
+- [x] Adjust pool configurations
+
+- [ ] `GET` route
+	- [ ] Query string
+	- [ ] Send back data
+	- [ ] Add `.catch`
+
+- [ ] `POST` route
+	- [ ] Query String
+	- [ ] Send back data
+	- [ ] Add `.catch`
+
+- [ ] `PUT` route
+	- [ ] Query String
+	- [ ] Send back the data with updates
+	- [ ] Add `.catch`
+
+- [ ] `DELETE` route
+	- [ ] Query String
+	- [ ] Delete data from DOM and database
+	- [ ] Add `.catch`
 
 ### Base Mode
 
