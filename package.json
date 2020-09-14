@@ -9,7 +9,8 @@
   "author": "instructors@primeacademy.io",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "pg": "^8.2.1"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pg": "^8.3.3"
   }
 }
